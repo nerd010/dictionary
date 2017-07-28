@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    NSDictionary *dic = @{@"1": @"a", @"2": @"b", @"3": @"c", @"4": @"d"};
+    dict = [NSMutableDictionary dictionaryWithDictionary:dic];
+//    [dict mutableCopy];
+    [dict removeObjectForKey:@"3"];
+    NSLog(@"dict:%@",dict.description);
+    
 }
 
 - (void)didReceiveMemoryWarning {
